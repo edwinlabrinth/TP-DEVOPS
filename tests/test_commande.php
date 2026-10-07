@@ -54,3 +54,6 @@ $exception = false;
 try { $commandeVide->valider(); } catch (Exception $e) { $exception = true; }
 verifier($exception, 'valider() refuse une commande vide');
 verifier($commandeVide->estValidee() === false, 'Une commande vide reste non validee');
+// getNumero() et statut dans la facture
+verifier($commande->getNumero() === 1, 'getNumero() retourne le numero de la commande');
+verifier(str_contains($commande->afficher(), 'Statut : validee'), 'La facture indique que la commande est validee');
