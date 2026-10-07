@@ -35,7 +35,7 @@ class Stock
         foreach ($this->produits as $p) {
             $total += $p->valeurStock();
         }
-        return $total;
+        return -1;
     }
 
     public function produitsEnRupture(): array
