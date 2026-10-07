@@ -10,9 +10,6 @@ Le développement est strictement réparti selon les rôles suivants pour permet
 * **Partie C** : Création des fichiers `src/Commande.php`, `tests/test_commande.php` et `index.php`[cite: 2]. Implémentation de la classe `Commande` pour gérer les lignes d'achat et la validation, accompagnée du fichier `index.php` générant le menu interactif reliant les trois classes[cite: 2].
 
 ## Équipe
-<<<<<<< HEAD
-* SLIMANI Aimad Eddine - classe Commande + menu index.php (C)
-=======
 LACHHAB Mohammed - A
 HAYOUN Ferdaous - B
->>>>>>> be195d2fd6d36b36fb7da83a3a3e835d5c016d2c
+SLIMANI Aimad Eddine - C
