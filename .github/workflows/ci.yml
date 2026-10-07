@@ -1,17 +1,23 @@
 name: CI
+
 on:
-push:
-branches: [main]
-pull_request:
-branches: [main]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v4
-- uses: shivammathur/setup-php@v2
-with:
-php-version: "8.3"
-run: find . -name "*.php" -print0 | xargs -0 -n1 php -l
-- name: Tests
-run: php tests/run.php
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+
+      - name: Verification de la syntaxe PHP
+        run: find . -name "*.php" -print0 | xargs -0 -n1 php -l
+
+      - name: Tests
+        run: php tests/run.php
